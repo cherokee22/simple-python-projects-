@@ -1,0 +1,24 @@
+
+''' invalid credit number ''' 
+
+
+cardnum = input (" enter the card number")
+sum_of_e=0
+sum_of_o=0
+total=0
+
+card = cardnum[::-1]
+
+for x in card :
+    sum_of_o = sum_of_o + int(x)
+for x in card[1::2]:
+    x = int(x)*2
+    if x>=10:
+     sum_of_e = sum_of_e + (1+(x%10))
+    else :
+      sum_of_e = sum_of_e + int(x)
+total = sum_of_e+ sum_of_o
+if (total % 10 == 0):
+     print("valid")
+else :
+     print(" invalid ")
