@@ -3,10 +3,9 @@
 
 
 
-i =10
+
 for i in range(11):
-    i=i-1
-    for j in range(i,10):
+    for j in range(10-i):
         print("*",end="")
         print()
 
